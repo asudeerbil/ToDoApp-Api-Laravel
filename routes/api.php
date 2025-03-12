@@ -20,7 +20,6 @@ Route::prefix('auth')->group(function(){
 Route::middleware('auth:api')->group(function () {
     Route::apiResource('todo', TodoController::class);
     Route::get('/auth/myprofile',[UserController::class,'myProfile']);
-    Route::post('auth/update/image',[UserController::class,'updateUserImage']);
     
 });
 
